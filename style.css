@@ -1,13 +1,15 @@
 body,
 html {
+    background-color: rgb(58, 58, 58);
   height: 100%;
   margin: 0;
 }
 
 .mainContainer{
+    margin: 0;
     text-align: center;
     height: 100%;
-    padding: 16px;
+    padding: 1px;
     box-sizing: border-box;
     display: grid;
     grid-template-columns: repeat(1, 1.5fr) repeat(1, 5fr);
@@ -18,6 +20,7 @@ html {
     border: 1px black solid;
     background-color: aquamarine;
 }
+/* sidebar stuff ----------------------------------------------*/
 
 .sidebar{
     height: inherit;
@@ -25,6 +28,32 @@ html {
     box-sizing: border-box;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 8fr ;
+    grid-template-rows: 0.5fr 5fr ;
+    gap: 15px;
 }
 
+/* Brand stuff ---------------------------------------*/
+
+.brand{
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+}
+
+/* End of brand stuff ---------------------------------------------*/
+
+/* Menu stuf -------------------------------------------*/
+
+.menu{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+}
+
+
+
+.menuitem{
+    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    text-align: start;
+}
