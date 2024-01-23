@@ -59,3 +59,18 @@ html {
 }
 
 /* End of menu stuff -------------------------*/
+
+/* Header stuff ---------------------------------*/
+.mainarea{
+    display: grid;
+    grid-template-rows: 2fr 8fr;
+}
+header{
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+/* Отсюда дальше продолжай, остановился на разделении элементов хэдэра*/
+.headertop{
+    display: ;
+}
