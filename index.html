@@ -4,55 +4,70 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
 </head>
 <body>
 <div class="mainContainer">
   <div class="sidebar"> 
     <div class="brand">
         <div id="brandlogo"> <img width="50" height="50" src="https://img.icons8.com/ios/50/old-vmware-logo.png" alt="old-vmware-logo"/> </div>
-        <div id="brandname"> <p> CorpoDash </p> </div>
+        <div id="brandname"> <p> DoggoDash </p> </div>
     </div>
     <div class="menu">
-        <div class="menuitem" id="home"><img width="50" height="50" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/><p>Home</p></div>
-        <div class="menuitem" id="profile"><img width="48" height="48" src="https://img.icons8.com/material-outlined/48/cat-profile.png" alt="cat-profile"/><p>Profile</p></div>
-        <div class="menuitem" id="messages"><img width="48" height="48" src="https://img.icons8.com/material-outlined/48/chat.png" alt="chat"/><p>Messages</p></div>
-        <div class="menuitem" id="history"><img width="50" height="50" src="https://img.icons8.com/ios/50/order-history.png" alt="order-history"/><p>History</p></div>
-        <div class="menuitem" id="tasks"><img width="50" height="50" src="https://img.icons8.com/ios/50/tasks--v1.png" alt="tasks--v1"/><p>Tasks</p></div>
+        
+        <div class="menuitem" id="home"><img width="25" height="25" src="https://img.icons8.com/ios/50/home--v1.png" alt="home--v1"/><p>Home</p></div>
+        <div class="menuitem" id="profile"><img width="25" height="25" src="https://img.icons8.com/material-outlined/48/cat-profile.png" alt="cat-profile"/><p>Profile</p></div>
+        <div class="menuitem" id="messages"><img width="25" height="25" src="https://img.icons8.com/material-outlined/48/chat.png" alt="chat"/><p>Messages</p></div>
+        <div class="menuitem" id="history"><img width="25" height="25" src="https://img.icons8.com/ios/50/order-history.png" alt="order-history"/><p>History</p></div>
+        <div class="menuitem" id="tasks"><img width="25" height="25" src="https://img.icons8.com/ios/50/tasks--v1.png" alt="tasks--v1"/><p>Tasks</p></div>
         <div class="menuitem"></div>
-        <div class="menuitem" id="settings"><img width="50" height="50" src="https://img.icons8.com/ios/50/apple-settings.png" alt="apple-settings"/><p>Settings</p></div>
-        <div class="menuitem" id="support"><img width="50" height="50" src="https://img.icons8.com/ios/50/support.png" alt="support"/><p>Support</p></div>
-        <div class="menuitem" id="privacy"><img width="50" height="50" src="https://img.icons8.com/ios/50/privacy.png" alt="privacy"/><p>Privacy</p></div>
+        <div class="menuitem" id="settings"><img width="25" height="25" src="https://img.icons8.com/ios/50/apple-settings.png" alt="apple-settings"/><p>Settings</p></div>
+        <div class="menuitem" id="support"><img width="25" height="25" src="https://img.icons8.com/ios/50/support.png" alt="support"/><p>Support</p></div>
+        <div class="menuitem" id="privacy"><img width="25" height="25" src="https://img.icons8.com/ios/50/privacy.png" alt="privacy"/><p>Privacy</p></div>
+
     </div>
   </div>
   <div class="mainarea">
     <header>
         <div class="headertop">
-        <div class="searchbar"></div>
-        <div class="notifications"></div>
+         <div class="searchbardiv"> 
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/search--v1.png" alt="search--v1"/>
+            <input id="searchbar" type="text"> </div>
+         <div class="notifications"> <img width="30" height="30" src="https://img.icons8.com/parakeet-line/48/appointment-reminders.png" alt="appointment-reminders"/> </div>
         <div class="userbox">
-            <div id="userpfpsmall"></div>
-            <p id="username"></p>
+            <img style="border-radius: 25px;" width="35" height="35" src="https://i.pinimg.com/236x/03/15/98/031598e7ab10256df6a0c56987a4826c.jpg">
+            <p id="username"> SpaceDogster </p>
         </div>
         </div>
         <div class="headerbot">
         <div id="userid">
-            <div id="userpfpbig"></div>
+            <img style="border-radius: 25px;" width="50" height="50" src="https://i.pinimg.com/236x/03/15/98/031598e7ab10256df6a0c56987a4826c.jpg">
             <div id="usernameandid">
-                <p id="greetings"></p>
-                <p id="usernameandidtext"></p>
+                <p id="greetings">Welcome,</p>
+                <p id="usernameandidtext">SpaceDogster (@gooddoggo375)</p>
             </div>
         </div>
-        <div id="now"></div>
-        <div id="upload"></div>
-        <div id="share"></div>
+        <div id="new"><button>New</button> </div>
+        <div id="upload"><button>Upload</button></div>
+        <div id="share"><button>Share</button></div>
         </div>
     </header>
     <main>
-        <div id="projects"></div>
+        <div id="projects">
+            <h4>Our last projects</h4>
+        <div id="projectlist">
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ab aspernatur eum, pariatur nulla veniam expedita atque reprehenderit illo, id nesciunt similique. Consequuntur voluptatem reiciendis ipsum odio neque aperiam quis!</div>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ab aspernatur eum, pariatur nulla veniam expedita atque reprehenderit illo, id nesciunt similique. Consequuntur voluptatem reiciendis ipsum odio neque aperiam quis!</div>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ab aspernatur eum, pariatur nulla veniam expedita atque reprehenderit illo, id nesciunt similique. Consequuntur voluptatem reiciendis ipsum odio neque aperiam quis!</div>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ab aspernatur eum, pariatur nulla veniam expedita atque reprehenderit illo, id nesciunt similique. Consequuntur voluptatem reiciendis ipsum odio neque aperiam quis!</div>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ab aspernatur eum, pariatur nulla veniam expedita atque reprehenderit illo, id nesciunt similique. Consequuntur voluptatem reiciendis ipsum odio neque aperiam quis!</div>
+            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ab aspernatur eum, pariatur nulla veniam expedita atque reprehenderit illo, id nesciunt similique. Consequuntur voluptatem reiciendis ipsum odio neque aperiam quis!</div>
+        </div>
+        
         <div class="rightsidebar">
-        <div id="announcements"></div>
-        <div id="trending"></div>
+            <div id="announcements"></div>
+            <div id="trending"></div>
+        </div>
         </div>
     </main>
     <footer>

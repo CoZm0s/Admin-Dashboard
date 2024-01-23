@@ -35,8 +35,7 @@ html {
 /* Brand stuff ---------------------------------------*/
 
 .brand{
-    display: grid;
-    grid-template-columns: 0.2fr 0.8fr;
+    display: flex;
 }
 
 /* End of brand stuff ---------------------------------------------*/
@@ -44,18 +43,26 @@ html {
 /* Menu stuf -------------------------------------------*/
 
 .menu{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
+    display: flex;
+    flex-direction: column;
+}
+.menu div{
+    display: flex;
+    align-items: center;
+    text-align: start;
+}
+#settings{
+    margin-top: 35px;
 }
 
 
-
 .menuitem{
+    margin-left: 5px;
     gap: 5px;
     display: grid;
     grid-template-columns: 1fr 3fr;
     text-align: start;
+
 }
 
 /* End of menu stuff -------------------------*/
@@ -66,11 +73,84 @@ html {
     grid-template-rows: 2fr 8fr;
 }
 header{
+    background-color: blue;
     display: grid;
-    grid-template-columns: 6fr 1fr;
+    grid-template-columns: 6fr;
     grid-template-rows: 1fr 2fr;
 }
 /* Отсюда дальше продолжай, остановился на разделении элементов хэдэра*/
 .headertop{
-    display: ;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 7fr 1fr 2fr;
+}
+
+.searchbardiv{
+    align-items: center;
+    display: flex;
+}
+
+#searchbar{
+    margin-right: 10px;
+    margin: 5px;
+    border-radius: 25px;
+    background-color: rgb(107, 194, 165);
+    border: 0.5px rgba(255, 255, 255, 0.288) solid;
+    flex-grow: 1;
+}
+.notifications{
+    margin: auto;
+}
+.userbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.headerbot{
+    display: grid;
+    grid-template-columns: 4fr repeat(3, 1fr); 
+
+}
+#userid{
+    align-items: center;
+    display: flex;
+    align-content: flex-start;
+    text-align: start;
+}
+
+.headerbot p{
+    margin: 5px;
+}
+/* End of the header thing --------------------------------*/
+
+main{
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+}
+h4{
+    text-align: start;
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+#projectlist{
+    margin: 5px;
+    display: grid;
+    gap: 5px;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.rightsidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.rightsidebar div{
+    flex-grow: 1;
 }
