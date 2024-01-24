@@ -1,9 +1,24 @@
+@font-face {
+    font-family: Main;
+    src: url(fonts/NotoSans-VariableFont_wdth\,wght.ttf);
+}
+
 body,
 html {
-    background-color: rgb(58, 58, 58);
   height: 100%;
   margin: 0;
+  font-family: Main;
 }
+
+.pfp{
+    border: #926eec 1px solid;
+}
+.pfp:hover{
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 1px 1px 10px #B4A0E5;
+}
+
 
 .mainContainer{
     margin: 0;
@@ -12,23 +27,18 @@ html {
     padding: 1px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(1, 1.5fr) repeat(1, 5fr);
-    gap: 2px;
+    grid-template-columns:  1fr 5fr;
 }
 
-.mainContainer div{
-    border: 1px black solid;
-    background-color: aquamarine;
-}
 /* sidebar stuff ----------------------------------------------*/
 
 .sidebar{
+    background-color: #B4A0E5;
     height: inherit;
     padding: inherit;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 5fr ;
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 
@@ -43,10 +53,22 @@ html {
 /* Menu stuf -------------------------------------------*/
 
 .menu{
+    margin-left: -30px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
-.menu div{
+
+.menu li :hover{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+.menu li :active{
+    transform: scale(0.98);
+}
+
+.menu li{
+    height: 30px;
     display: flex;
     align-items: center;
     text-align: start;
@@ -69,14 +91,16 @@ html {
 
 /* Header stuff ---------------------------------*/
 .mainarea{
+    background-color: #E2EFDE;
     display: grid;
     grid-template-rows: 2fr 8fr;
 }
 header{
-    background-color: blue;
+    background-color: #AFD0BF;
     display: grid;
     grid-template-columns: 6fr;
     grid-template-rows: 1fr 2fr;
+    border-bottom: #B4A0E5 2px solid;
 }
 /* Отсюда дальше продолжай, остановился на разделении элементов хэдэра*/
 .headertop{
@@ -86,6 +110,7 @@ header{
 }
 
 .searchbardiv{
+    margin: 8px;
     align-items: center;
     display: flex;
 }
@@ -94,13 +119,25 @@ header{
     margin-right: 10px;
     margin: 5px;
     border-radius: 25px;
-    background-color: rgb(107, 194, 165);
-    border: 0.5px rgba(255, 255, 255, 0.288) solid;
+    background-color: #E2EFDE;
+    border: 1px #B4A0E5 solid;
     flex-grow: 1;
 }
 .notifications{
     margin: auto;
 }
+.notifications:hover{
+    animation-name: jingle;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jingle {
+    0% {transform: rotate(10deg)} 
+    100% {transform: rotate(5deg);}
+}
+
+
 .userbox{
     display: flex;
     align-items: center;
@@ -109,10 +146,11 @@ header{
 
 .headerbot{
     display: grid;
-    grid-template-columns: 4fr repeat(3, 1fr); 
+    grid-template-columns: 4fr 1fr; 
 
 }
 #userid{
+    margin: 8px;
     align-items: center;
     display: flex;
     align-content: flex-start;
@@ -122,6 +160,38 @@ header{
 .headerbot p{
     margin: 5px;
 }
+
+.buttoncont{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.headerbot button{
+    font-family: Main;
+    background-color: #B4A0E5;
+    border: #926eec 2px solid;
+    border-radius: 15px;
+    margin: auto;
+    height: 45px;
+    width: 65px;
+}
+
+.buttoncont :hover{
+    cursor: pointer;
+}
+
+.buttoncont :active{
+    transform: scale(0.90);
+    box-shadow: 1px 1px 1px blueviolet;
+}
+
 /* End of the header thing --------------------------------*/
 
 main{
@@ -133,10 +203,34 @@ h3{
     margin: 5px;
 }
 
+.projectitem{
+    text-align: start;
+    border: 2px #B4A0E5 solid;
+    border-radius: 10px;
+    background-color: #AFD0BF;
+}
+
+.projectitem p{
+    padding: 5px
+}
+
+.projectitem:hover{
+    transform: scale(1.01);
+    box-shadow: 1px 1px 10px #B4A0E5;
+}
+
+#projectactions :hover{
+    cursor: pointer;
+}
+
+#projectactions :active{
+    transform: scale(0.90);
+}
+
 #projectlist{
     margin: 5px;
     display: grid;
-    gap: 5px;
+    gap: 10px;
     grid-template-rows: auto 1fr 1fr;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
@@ -144,9 +238,25 @@ h3{
 .rightsidebar{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 25px;
 }
 
+#announcements{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.announcement{
+    border: 2px #B4A0E5 solid;
+    border-radius: 10px;
+    background-color: #AFD0BF;
+    margin: 5px;
+}
+
+.announcement:hover{
+    transform: scale(1.01);
+    box-shadow: 1px 1px 10px #B4A0E5;
+}
 
 .announcement h5{
     text-align: start;
@@ -174,9 +284,22 @@ h3{
     width: 25px;
 }
 
-.trendingacc{
-
+#trending{
     display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.trendingacc{
+    border: 2px #B4A0E5 solid;
+    border-radius: 10px;
+    background-color: #AFD0BF;
+    margin: 5px;
+    display: flex;
+}
+.trendingacc:hover{
+    transform: scale(1.01);
+    box-shadow: 1px 1px 10px #B4A0E5;
 }
 .trendingacc img{
     border-radius: 25px;
@@ -184,6 +307,11 @@ h3{
     height: 25px;
     width: 25px;
 }
+
+.trendingacc img:hover{
+    cursor: pointer;
+}
+
 .trendinfo{
     display: flex;
     flex-direction: column;
