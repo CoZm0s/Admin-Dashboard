@@ -11,12 +11,14 @@ html {
 }
 
 .pfp{
-    border: #926eec 1px solid;
+    transition: 1s;
+    box-shadow: 2px 2px 10px white;
+    border: white 1px solid;
 }
 .pfp:hover{
     cursor: pointer;
-    transform: scale(1.01);
-    box-shadow: 1px 1px 10px #B4A0E5;
+    transform: scale(1.10);
+    box-shadow: 1px 1px 10px #CD9FCC;
 }
 
 
@@ -33,7 +35,8 @@ html {
 /* sidebar stuff ----------------------------------------------*/
 
 .sidebar{
-    background-color: #B4A0E5;
+    color: #F6CACA;
+    background-color: #310A31;
     height: inherit;
     padding: inherit;
     box-sizing: border-box;
@@ -42,9 +45,12 @@ html {
     gap: 15px;
 }
 
+
 /* Brand stuff ---------------------------------------*/
 
 .brand{
+    gap: 8px;
+    margin: 10px;
     display: flex;
 }
 
@@ -91,16 +97,17 @@ html {
 
 /* Header stuff ---------------------------------*/
 .mainarea{
-    background-color: #E2EFDE;
+    background-color: #F6CACA;
     display: grid;
     grid-template-rows: 2fr 8fr;
 }
 header{
-    background-color: #AFD0BF;
+    background: rgb(49,10,49);
+    background: linear-gradient(90deg, rgba(49,10,49,1) 0%, rgba(205,159,204,1) 46%);
     display: grid;
     grid-template-columns: 6fr;
     grid-template-rows: 1fr 2fr;
-    border-bottom: #B4A0E5 2px solid;
+    border-bottom: #CD9FCC 2px solid;
 }
 /* Отсюда дальше продолжай, остановился на разделении элементов хэдэра*/
 .headertop{
@@ -119,8 +126,8 @@ header{
     margin-right: 10px;
     margin: 5px;
     border-radius: 25px;
-    background-color: #E2EFDE;
-    border: 1px #B4A0E5 solid;
+    background-color: #F6CACA;
+    border: 1px #CD9FCC solid;
     flex-grow: 1;
 }
 .notifications{
@@ -145,12 +152,17 @@ header{
 }
 
 .headerbot{
+
     display: grid;
     grid-template-columns: 4fr 1fr; 
 
 }
 #userid{
-    margin: 8px;
+    gap: 10px;
+    color: #F6CACA;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-left: 25px;
     align-items: center;
     display: flex;
     align-content: flex-start;
@@ -175,8 +187,8 @@ header{
 
 .headerbot button{
     font-family: Main;
-    background-color: #B4A0E5;
-    border: #926eec 2px solid;
+    background-color: #F6CACA;
+    border: #3f123f 2px solid;
     border-radius: 15px;
     margin: auto;
     height: 45px;
@@ -207,8 +219,10 @@ h3{
     text-align: start;
     border: 2px #B4A0E5 solid;
     border-radius: 10px;
-    background-color: #AFD0BF;
+    background-color: #CD9FCC;
+    transition: 1s;
 }
+
 
 .projectitem p{
     padding: 5px
@@ -235,6 +249,11 @@ h3{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+#projectlist .projectitem{
+    border-left: 10px solid #310A31;
+    margin-left: 5px;
+}
+
 .rightsidebar{
     display: flex;
     flex-direction: column;
@@ -247,9 +266,10 @@ h3{
     gap: 5px;
 }
 .announcement{
+    transition: 1s;
     border: 2px #B4A0E5 solid;
     border-radius: 10px;
-    background-color: #AFD0BF;
+    background-color: #CD9FCC;
     margin: 5px;
 }
 
@@ -291,9 +311,10 @@ h3{
 }
 
 .trendingacc{
+    transition: 1s;
     border: 2px #B4A0E5 solid;
     border-radius: 10px;
-    background-color: #AFD0BF;
+    background-color: #CD9FCC;
     margin: 5px;
     display: flex;
 }
@@ -322,4 +343,9 @@ h3{
 .trendinfo p{
     justify-content: flex-start;
     margin: 2px;
+}
+
+footer{
+    background-color: rgba(128, 128, 128, 0.575);
+    width: 100%;
 }
